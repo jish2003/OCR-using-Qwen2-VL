@@ -21,7 +21,7 @@ processor = AutoProcessor.from_pretrained(
 def extract_text(image):
   
   device = "cuda" if torch.cuda.is_available() else "cpu"
-  model = model.to_empty(device)
+  model.to_empty(device)
 
 # Load the image using the file path
   image = Image.open(image)
