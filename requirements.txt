@@ -1,8 +1,7 @@
+re
 streamlit
-transformers
-datasets
+git+https://github.com/huggingface/transformers
 pillow
 qwen-vl-utils
 torch
 tensorflow-cpu
-re
