@@ -76,16 +76,16 @@ st.title("OCR with Keyword Search")
 uploaded_file = st.file_uploader("Choose an Image", type=["jpg", "jpeg", "png"])
 keyword = st.text_input("Enter a keyword to search")
 
-if uploaded_file is not None:
-  image = Image.open(uploaded_file)
-  extracted_text = extract_text(image)
-  
-  if keyword:
-    highlighted_text = re.sub(rf"(?i){keyword}", f"<mark>{keyword}</mark>", extracted_text)
-  else:
-    highlighted_text = extracted_text
-  
-  st.write(highlighted_text, unsafe_allow_html=True)
-  
+if st.button("Extract Text"):
   if uploaded_file is not None:
+    image = Image.open(uploaded_file)
+    extracted_text = extract_text(image)
+
+    if keyword:
+      highlighted_text = re.sub(rf"(?i){keyword}", f"<mark>{keyword}</mark>", extracted_text)
+    else:
+      highlighted_text = extracted_text
+
+    st.write(highlighted_text, unsafe_allow_html=True)
+
     st.image(image, caption='Uploaded Image', use_column_width=True)
