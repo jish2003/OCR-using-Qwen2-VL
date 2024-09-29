@@ -13,30 +13,32 @@ model = Qwen2VLForConditionalGeneration.from_pretrained(
     "Qwen/Qwen2-VL-2B-Instruct",
     torch_dtype="auto",
     device_map="auto",
-)
+).cpu().eval()
 processor = AutoProcessor.from_pretrained(
     "Qwen/Qwen2-VL-2B-Instruct"
 )
 
 def extract_text(image):
   
-  device = "cuda" if torch.cuda.is_available() else "cpu"
-  model.to_empty(device)
+#   device = "cuda" if torch.cuda.is_available() else "cpu"
+#   model.to(device)
 
 # Load the image using the file path
-  image = Image.open(image)
+#   image = Image.open(image)
+  image = image.convert("RGB")
 
 #   print(image)
 
 
   # Existing Colab code for image processing, text extraction, and model inference
   # Adapt paths and references to work within Streamlit
+#   Extract all the text in Sanskrit and English from the image.
   messages = [
         {
             "role": "user",
             "content": [
                 {"type": "image", "image": image},
-                {"type": "text", "text": "Extract all the text in Sanskrit and English from the image."}],
+                {"type": "text", "text": "Extract all text from this image, including both Hindi and English."}],
         }
     ]
   
@@ -52,7 +54,7 @@ def extract_text(image):
       return_tensors="pt"
   )
 
-  inputs = inputs.to("cuda" if torch.cuda.is_available() else "cpu")  # Move to GPU if available
+  inputs = inputs.to("cpu")
 
 
   with torch.no_grad():
