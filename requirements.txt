@@ -5,4 +5,4 @@ qwen-vl-utils
 torch
 tensorflow-cpu
 torchvision
-accelerator
+accelerate
