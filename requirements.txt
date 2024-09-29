@@ -1,0 +1,8 @@
+streamlit
+transformers
+datasets
+pillow
+qwen-vl-utils
+torch
+tensorflow-cpu
+re
