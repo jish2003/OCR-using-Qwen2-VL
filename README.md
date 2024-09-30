@@ -13,7 +13,9 @@ Ensure you have Python and the required libraries installed (pip install require
 
 Run the following command in your terminal:
 
+```bash
 streamlit run app.py
+```
 
 This will launch the web app in your browser, allowing you to upload images and extract text.
 
