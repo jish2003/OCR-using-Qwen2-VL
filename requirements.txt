@@ -3,6 +3,6 @@ git+https://github.com/huggingface/transformers
 pillow
 qwen-vl-utils
 torch
-tensorflow-cpu
+tensorflow
 torchvision
 accelerate
