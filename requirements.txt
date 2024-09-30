@@ -1,8 +1,18 @@
-streamlit
-git+https://github.com/huggingface/transformers
-pillow
-qwen-vl-utils
-torch
-tensorflow
+# streamlit
+# git+https://github.com/huggingface/transformers
+# pillow
+# qwen-vl-utils
+# torch
+# tensorflow
+# torchvision
+# accelerate
+torch>=1.9.0
 torchvision
-accelerate
+transformers @ git+https://github.com/huggingface/transformers
+Pillow>=8.0.0
+opencv-python>=4.5.3
+qwen-vl-utils
+numpy>=1.21.0
+scikit-learn>=0.24.2
+matplotlib>=3.4.3  # Optional, for visualizations
+tqdm>=4.61.2       # Optional, for progress tracking
