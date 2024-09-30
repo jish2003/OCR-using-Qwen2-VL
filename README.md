@@ -20,7 +20,9 @@ This will launch the web app in your browser, allowing you to upload images and 
 ### Colab Notebook:
 
 Upload the repository to Google Colab or create a new Colab notebook.
+
 Open the included Jupyter Notebook (e.g., ocr_with_qwen2vl.ipynb).
+
 Follow the instructions and run the notebook cells to extract text from images.
 
 ### Usage:
@@ -30,5 +32,6 @@ Both the Streamlit app and the Colab notebook provide a user interface for uploa
 ### Requirements:
 
 Python (version 3.6 or later)
+
 Necessary libraries (specified in requirements.txt)
 
